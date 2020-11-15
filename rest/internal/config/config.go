@@ -1,8 +1,8 @@
 package config
 
 import (
-	"io/ioutil"
 	"gopkg.in/yaml.v3"
+	"io/ioutil"
 )
 
 type DbConfig struct {
@@ -14,7 +14,7 @@ type Config struct {
 	Version string `yaml:"version"`
 }
 
-func loadConfig(filename string) (*Config, error) {
+func LoadConfig(filename string) (*Config, error) {
 	// := Creates a variable and infers the type
 	file, err := ioutil.ReadFile(filename)
 	if err != nil {
