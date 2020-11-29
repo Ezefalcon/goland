@@ -6,20 +6,20 @@ import (
 
 type BagOfSwords struct {
 	speciality string
-	swords map[int]*Sword
+	swords     map[int]*Sword
 }
 
 type Sword struct {
-	ID int
-	name string
+	ID    int
+	name  string
 	power int
 }
 
 // Create new instance
 func NewBagOfSwords(speciality string) BagOfSwords {
-	return BagOfSwords {
+	return BagOfSwords{
 		speciality: speciality,
-		swords: make(map[int]*Sword),
+		swords:     make(map[int]*Sword),
 	}
 }
 

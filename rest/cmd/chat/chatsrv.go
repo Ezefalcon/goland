@@ -1,7 +1,8 @@
 package main
 
-import config "github.com/ezefalcon/golang/rest/internal/config"
+import config "config"
 
 func main() {
+	config.LoadConfig
 	cfg, err := config.LoadConfig("asd")
 }

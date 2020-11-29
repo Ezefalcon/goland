@@ -17,7 +17,7 @@ func TestBagOfSwords_Add(t *testing.T) {
 		t.Error("The sword with ID 0 already exists")
 	}
 
-	bag.Add(Sword{0,"Excalibur", 10})
+	bag.Add(Sword{0, "Excalibur", 10})
 	sword = bag.findByID(0)
 	if sword == nil {
 		t.Error("The sword could not be added")
@@ -33,11 +33,11 @@ func TestBagOfSwords_findByID(t *testing.T) {
 }
 
 func TestBagOfSwords_Update(t *testing.T) {
-	bag.Add(Sword{0,"Excalibur", 10})
+	bag.Add(Sword{0, "Excalibur", 10})
 	bag.update(Sword{0, "Updated", 1})
 	sword := bag.findByID(0)
 
-	fmt.Println(sword.name )
+	fmt.Println(sword.name)
 	if sword == nil {
 		t.Error("The sword could not be updated")
 	} else if sword.name != "Upadted" || sword.power != 1 {
@@ -46,7 +46,7 @@ func TestBagOfSwords_Update(t *testing.T) {
 }
 
 func TestBagOfSwords_Delete(t *testing.T) {
-	bag.Add(Sword{0,"Excalibur", 10})
+	bag.Add(Sword{0, "Excalibur", 10})
 	sword := bag.findByID(0)
 	if sword == nil {
 		t.Error("The sword could not be added")
@@ -57,4 +57,3 @@ func TestBagOfSwords_Delete(t *testing.T) {
 		t.Error("The sword coult not be deleted")
 	}
 }
-

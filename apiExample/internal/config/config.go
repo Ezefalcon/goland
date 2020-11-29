@@ -7,6 +7,8 @@ import (
 
 type DbConfig struct {
 	Driver string `yaml:"driver"`
+	Type   string `yaml:"type"`
+	Conn string `yaml:"conn"`
 }
 
 type Config struct {
